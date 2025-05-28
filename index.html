@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tablas - DURAZO Y VEGA</title>
+    <style>
+        body {
+            background-size: cover;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        h1, h2 {
+            margin-top: 10px;
+        }
+        h1 {
+            font-size: 28px;
+        }
+        h2 {
+            font-size: 20px;
+            color: deeppink;
+        }
+        label {
+            font-size: 20px;
+            color: deeppink;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 18px;
+            color: deeppink;
+        }
+        .boton {
+            background-color: hotpink;
+            color: purple;
+            padding: 10px 20px;
+            margin-top: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .imagen {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body background="img/fondodos.jpg">
+
+    <h1>TABLAS - DURAZO Y VEGA</h1>
+    <h2>MOVILES Abril 2025</h2>
+    <h2>Tablas de multiplicar</h2>
+
+    <label for="numero">Numero:</label>
+    <input type="number" id="numero">
+    <br>
+    <button class="boton" onclick="mostrarTabla()">Resultado</button>
+
+    <div id="resultado"></div>
+
+    <div class="imagen">
+        <img src="img/signo.png" alt="Estrella" width="150">
+    </div>
+
+    <script>
+        function mostrarTabla() {
+            var numero = document.getElementById('numero').value;
+            var resultado = '';
+
+            for (var i = 1; i <= 10; i++) {
+                resultado += numero + ' x ' + i + ' = ' + (numero * i) + '<br>';
+            }
+
+            document.getElementById('resultado').innerHTML = resultado;
+        }
+    </script>
+
+</body>
+</html>
